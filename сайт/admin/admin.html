@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Курс: Индивидуальная тема</title>
+</head>
+<body>
+
+    <!-- ========== ШАПКА / МЕНЮ (ПЛАВАЮЩЕЕ) ========== -->
+    <header>
+        <div class="container">
+            <div class="logo">ИндиКурс</div>
+        </div>
+    </header>
+
+    <div class="tabs" style="width: 70%; height: 70%;">
+        <!-- Навигация по вкладкам -->
+        <ul class="tabs-nav">
+            <li><a href="#tab1" class="tab-link active">Создание и редактирование</a></li>
+            <li><a href="#tab2" class="tab-link">Курсы</a></li>
+        </ul>
+
+        <!-- Контент вкладок -->
+        <div class="tabs-content">
+            <!-- Вкладка 1: Создание -->
+            <div id="tab1" class="tab-pane active">
+                <section id="diRSE">
+                    <form id="courseForm">
+                        <h2>Название курса</h2>
+                        <input type="text" id="name" name="name" required>
+
+                        <h3>Блок 1</h3>
+                        <h4>Теория</h4>
+                        <input type="text" id="t1" name="t1">
+                        <h4>Практика</h4> 
+                        <input type="text" id="p1" name="p1">
+                        <h4>Ответ</h4> 
+                        <input type="text" id="otv1" name="otv1">
+
+                        <h3>Блок 2</h3>
+                        <h4>Теория</h4>
+                        <input type="text" id="t2" name="t2">
+                        <h4>Практика</h4> 
+                        <input type="text" id="p2" name="p2">
+                        <h4>Ответ</h4> 
+                        <input type="text" id="otv2" name="otv2">
+
+                        <h3>Блок 3</h3>
+                        <h4>Теория</h4>
+                        <input type="text" id="t3" name="t3">
+                        <h4>Практика</h4> 
+                        <input type="text" id="p3" name="p3">
+                        <h4>Ответ</h4> 
+                        <input type="text" id="otv3" name="otv3">
+
+                        <h3>Блок 4</h3>
+                        <h4>Теория</h4>
+                        <input type="text" id="t4" name="t4">
+                        <h4>Практика</h4> 
+                        <input type="text" id="p4" name="p4">
+                        <h4>Ответ</h4> 
+                        <input type="text" id="otv4" name="otv4">
+
+                        <h3>Блок 5</h3>
+                        <h4>Теория</h4>
+                        <input type="text" id="t5" name="t5">
+                        <h4>Практика</h4> 
+                        <input type="text" id="p5" name="p5">
+                        <h4>Ответ</h4> 
+                        <input type="text" id="otv5" name="otv5">
+
+                        <button type="submit" class="submit-btn" style="margin-top: 20px;">Ок</button>   
+                    </form>
+                </section>
+            </div>
+
+            <!-- Вкладка 2: Статусы -->
+            <div id="tab2" class="tab-pane">
+                <div class="container" style="display: block;">
+                    <div class="row">
+                        <div style="width: 60%; height: auto;">
+                            <section id="history" style="background-color: #fff; padding: 20px;">
+                                <h2>Статусы</h2>
+                                <div class="form-container">
+                                    <div id="Calc-history" style="margin-top: 20px; font-size: 24px; font-weight: bold; text-align: center; color: #007bff;">
+                                        Нет записей
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== ФУТЕР ========== -->
+    <footer>
+        <div class="container">
+            <div class="logo">ИндиКурс</div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Главная >></a></li>      
+                    <li><a href="../3/profil.html">Профиль >></a></li>  
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="admin_main.js"></script>
+</body>
+</html>

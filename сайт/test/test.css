@@ -1,0 +1,52 @@
+
+
+.tabs-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    border-bottom: 2px solid #0066cc;
+}
+
+.tabs-nav li {
+    margin-right: 5px;
+}
+
+.tab-link {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    transition: all 0.3s ease;
+}
+
+.tab-link:hover {
+    background-color: #e9e9e9;
+}
+
+.tab-link.active {
+    background-color: white;
+    border-bottom: 2px solid white;
+    margin-bottom: -2px;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.tabs-content {
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 20px;
+    background: white;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}

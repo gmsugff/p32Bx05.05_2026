@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Указываем кодировку символов -->
+    <meta charset="UTF-8">
+    <!-- Настройка отображения на мобильных устройствах -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Заголовок страницы, отображается во вкладке браузера -->
+     <link rel="stylesheet" href="styles.css">
+    <title>Курс: Индивидуальная тема</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <!-- ========== ШАПКА / МЕНЮ (ПЛАВАЮЩЕЕ) ========== -->
+    <header>
+        <div class="container">
+            <div class="logo">ИндиКурс</div>
+            
+        </div>
+    </header>
+
+    <!-- ========== ОСНОВНОЙ КОНТЕНТ ========== -->
+     <div class="row" style="text-align: center">
+                <div >
+                    <div>Avatar:</div>
+                    <div class="image_avatar">
+                        <image src="avat/cfd234fb73c2913b458c5d811b81640d.jpg" mode="not" width="90" height="90"></image>
+                    </div>
+                    
+                    <h3>Name:</h3>
+                    <div id="name"></div>
+                    <p>Email:</p>
+                    <div id="email"></div>
+                    <p>Phone:</p>
+                    <div id="phone"></div>
+                    <p>Application Status:</p>
+                    <div id="applicationStatu"></div>
+                </div>
+    <div class="tabs" style="  width: 70%; height: 70%;">
+        <!-- Навигация по вкладкам -->
+        <ul class="tabs-nav">
+            <li><a href="#tab1" class="tab-link active">История и калькулятор</a></li>
+            <li><a href="#tab2" class="tab-link">Курссы</a></li>
+            
+        </ul>
+
+        <!-- Содержимое вкладок -->
+        <div class="tabs-content">
+            <div id="tab1" class="tab-pane active">
+                <section id="advantages">
+        <div class="container" style="display: block;">
+            <!-- Ряд из карточек, flex расставит их по центру -->
+            
+                
+                <div  style="  width: auto; height: auto;">
+                     <section id="history" style="background-color: #fff;">
+                        <div class="container" style="display: block;">
+                            <h2>‌История</h2>
+                            <div class="form-container">
+
+                            <div id="Calc-history" style="margin-top: 20px; font-size: 24px; font-weight: bold; text-align: center; color: #007bff;">
+                                Нет записей
+                            </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    
+                    
+                </div>
+                
+            </div>
+    </section>
+<section id="calculator" style="background-color: #fff;">
+        <div class="container" style="display: block;">
+            <h2>Онлайн-калькулятор</h2>
+            <div class="form-container">
+                <form id="calc-form">
+                    <div class="form-group">
+                        <label for="num1">Первое число</label>
+                        <input type="number" id="num1" placeholder="Введите число" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="operation">Операция</label>
+                        <select id="operation" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px;">
+                            <option value="+">Сложение (+)</option>
+                            <option value="-">Вычитание (-)</option>
+                            <option value="*">Умножение (*)</option>
+                            <option value="/">Деление (/)</option>
+                            <option value="?=">Равно (?=)</option>
+                            <option value="%">Ост от деление (%)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="num2">Второе число</label>
+                        <input type="number" id="num2" placeholder="Введите число" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Посчитать на сервере</button>
+                </form>
+                
+                <div id="calc-result" style="margin-top: 20px; font-size: 24px; font-weight: bold; text-align: center; color: #007bff;">
+                    </div>
+            </div>
+        </div>
+    </section>
+            </div>
+            <div id="tab2" class="tab-pane">
+                <h3>Курс:</h3>
+                <h4 id="coursName">_________________</h4>
+                <h3>Статус курса</h3>
+                <h4 id="coursStat">_________________</h4>
+                <div id="btn"></div>
+        
+
+
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    
+    <!-- ========== ФУТЕР (точно такое же меню) ========== -->
+    <footer>
+        <div class="container">
+            <div class="logo">ИндиКурс</div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Главная >>></a></li>
+                    <li><a href="../2/registr.html">Зарегистрироваться >>></a></li>   
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

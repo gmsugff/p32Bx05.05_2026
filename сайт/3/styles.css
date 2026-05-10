@@ -1,0 +1,356 @@
+        /* Обнуляем отступы у всех элементов и задаём шрифт */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Ширина элемента включает padding и border */
+            font-family: Arial, sans-serif; /* Простой, читаемый шрифт */
+        }
+
+        /* Стиль для всего тела документа */
+        body {
+            background-color: #f9f9f9; /* Светлый фон */
+            color: #333; /* Тёмно-серый текст */
+            line-height: 1.6; /* Междустрочный интервал */
+        }
+
+        /* Шапка сайта (меню) */
+        header {
+            background-color: #fff; /* Белый фон */
+            padding: 20px 0; /* Отступ сверху и снизу 20px */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Лёгкая тень */
+            position: sticky; /* Прилипает к верху при прокрутке */
+            top: 0;
+            z-index: 100; /* Чтобы перекрывал другие блоки */
+        }
+
+        /* Контейнер — общая обёртка для всех блоков, ограничивает ширину */
+        .container {
+            width: 90%; /* Ширина 90% от родителя */
+            max-width: 1200px; /* Но не более 1200px */
+            margin: 0 auto; /* Выравнивание по центру */
+            display: flex; /* Гибкое выравнивание */
+            justify-content: space-between; /* Элементы прижаты к краям */
+            align-items: center; /* Вертикальное выравнивание по центру */
+        }
+
+        /* Логотип / название */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        /* Навигационное меню */
+        nav ul {
+            display: flex; /* Располагаем пункты в ряд */
+            list-style: none; /* Убираем маркеры списка */
+            gap: 30px; /* Отступы между пунктами */
+            align-items: center; /* Выравнивание по центру */
+        }
+
+        /* Ссылки в меню */
+        nav ul li a {
+            text-decoration: none; /* Убираем подчёркивание */
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s; /* Плавное изменение цвета */
+        }
+
+        /* Эффект при наведении на ссылку */
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Стиль для кнопки в меню (отличается от обычных ссылок) */
+        .menu-btn {
+            background-color: #007bff;
+            color: #fff !important; /* Белый текст, важно для переопределения */
+            padding: 8px 20px;
+            border-radius: 5px; /* Скругление углов */
+        }
+
+        .menu-btn:hover {
+            background-color: #0056b3; /* Темнее при наведении */
+            color: #fff !important;
+        }
+
+        /* ========== ОСНОВНЫЕ БЛОКИ ========== */
+        section {
+            padding: 80px 0; /* Вертикальные отступы у каждой секции */
+        }
+
+        /* Заголовки секций */
+        h2 {
+            text-align: center; /* По центру */
+            margin-bottom: 50px; /* Отступ снизу */
+            font-size: 36px;
+        }
+
+        /* Баннер — фоновая картинка и текст поверх */
+        .banner {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://img.freepik.com/premium-vector/minimal-blue-banner-geometric-shapes-abstract-modern-background-design-design-poster-template-web-backdrop-banner-brochure-website-flyer-landing-page-presentation-webinar_249611-15986.jpg?semt=ais_hybrid&w=740&q=80') no-repeat center/cover;
+            /* Темный overlay поверх картинки для читаемости текста */
+            color: #fff;
+            text-align: center;
+            padding: 150px 0; /* Большие отступы */
+        }
+
+        .banner h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .banner p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* Кнопка общего назначения (синяя) */
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer; /* Рука при наведении */
+            text-decoration: none;
+            display: inline-block; /* Чтобы работали padding */
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* ===== ТРЁХКОЛОНОЧНАЯ СЕТКА ===== */
+        /* Используем flex-wrap: wrap, чтобы при необходимости переносились */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Центрирование по горизонтали */
+            gap: 30px; /* Расстояние между колонками */
+        }
+
+        /* Карточка преимущества (4 штуки) — каждая занимает примерно 23% */
+        .advantage-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            flex: 1 1 200px; /* Можно сжиматься, расти, базово 200px */
+            max-width: 23%; /* Чтобы в ряду было 4 колонки */
+        }
+
+        /* Иконка-заглушка */
+        .icon {
+            font-size: 48px; /* Размер иконки (эмодзи) */
+            margin-bottom: 20px;
+        }
+
+        /* Карточка тарифа (3 штуки) */
+        .tariff-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            flex: 1 1 250px;
+            max-width: 30%; /* Для 3 колонок */
+        }
+
+        /* Блок "О нас" — 2 колонки: текст слева, картинка справа */
+        .about-row {
+            display: flex;
+            align-items: center; /* Выравнивание по вертикали */
+            gap: 50px;
+            flex-wrap: wrap; /* На мобильном переносится */
+        }
+
+        .about-text {
+            flex: 1 1 300px; /* Занимает доступное пространство */
+        }
+
+        .about-image {
+            flex: 1 1 300px;
+            text-align: center; /* Центрируем картинку */
+        }
+
+        .about-image img {
+            max-width: 100%; /* Чтобы не выходила за границы */
+            border-radius: 10px;
+        }
+
+        /* Форма заявки */
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto; /* Центрируем форму */
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Каждое поле формы — отдельная группа */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block; /* Каждая подпись на отдельной строке */
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%; /* На всю ширину родителя */
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Кнопка отправки формы */
+        .submit-btn {
+            background-color: #28a745; /* Зеленая */
+            color: #fff;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+        .end-btn{
+            background-color: #a83c3c; /* Зеленая */
+            color: #fff;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .end-btn:hover {
+            background-color: #93411e;
+        }
+        /* Футер (подвал) — такое же меню, как в header */
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 30px 0;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer .logo {
+            color: #fff; /* Белый логотип */
+        }
+
+        footer nav ul li a {
+            color: #ddd; /* Светло-серые ссылки */
+        }
+
+        footer nav ul li a:hover {
+            color: #fff;
+        }
+
+        /* Убираем синий фон кнопки в футере, делаем прозрачный */
+        footer .menu-btn {
+            background-color: transparent;
+            border: 1px solid #fff;
+            color: #fff !important;
+        }
+
+        footer .menu-btn:hover {
+            background-color: #fff;
+            color: #222 !important;
+        }
+
+        /* Адаптация для маленьких экранов: колонки становятся вертикальными */
+        @media (max-width: 768px) {
+            .advantage-card, .tariff-card {
+                max-width: 100%; /* Каждая карточка на всю ширину */
+            }
+
+            .container {
+                flex-direction: column; /* Меню вертикально */
+                gap: 20px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+        image{
+         height: 30px;   
+         width: 30px;
+         size: 30px 30px;
+         background-size: 30px, 30px;
+        }
+        .tabs {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tabs-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    border-bottom: 2px solid #0066cc;
+}
+
+.tabs-nav li {
+    margin-right: 5px;
+}
+
+.tab-link {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    transition: all 0.3s ease;
+}
+
+.tab-link:hover {
+    background-color: #e9e9e9;
+}
+
+.tab-link.active {
+    background-color: white;
+    border-bottom: 2px solid white;
+    margin-bottom: -2px;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.tabs-content {
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 20px;
+    background: white;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}

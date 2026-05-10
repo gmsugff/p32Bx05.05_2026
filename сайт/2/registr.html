@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Указываем кодировку символов -->
+    <meta charset="UTF-8">
+    <!-- Настройка отображения на мобильных устройствах -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Заголовок страницы, отображается во вкладке браузера -->
+     <link rel="stylesheet" href="styles.css">
+    <title>Курс: Индивидуальная тема</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <!-- ========== ШАПКА / МЕНЮ (ПЛАВАЮЩЕЕ) ========== -->
+    <header>
+        <div class="container">
+            <div class="logo">ИндиКурс</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#registr">Зарегистрироваться</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+   
+ <section id="registr" style="background-color: #e9ecef;">
+        <div class="container" style="display: block;">
+            <h2>Регистрация</h2>
+            <div class="form-container">
+                <form id="Regint-form">
+                
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" id="username"  placeholder="Введите логин" required>
+
+                        <label for="Pas">Пароль</label>
+                        <input type="text" id="password"  placeholder="Введите пароль" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Ok</button>
+                   
+
+                </form>
+                
+                    <h1 id ="welcom-mess" style="margin-top: 20px; font-size: 24px; font-weight: bold; text-align: center; color: #007bff;">
+                        Hi!
+                    </h1>
+            </div>
+        </div>
+    </section>
+   
+    
+    <!-- ========== ФУТЕР (точно такое же меню) ========== -->
+    <footer>
+        <div class="container">
+            <div class="logo">ИндиКурс</div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Главная >></a></li>      
+                    <li><a href="../3/profil.html">Профиль >></a></li>  
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="reg_main.js"></script>
+</body>
+</html>
